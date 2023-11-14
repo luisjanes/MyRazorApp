@@ -5,17 +5,33 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Olá, Mundo!
-        </title>
-        <body>
-            <div>
-            @for(var i=0; i < 10; i++)
-            {
-                <p>Item @i</p>
-            }
-        </div>
-        </body>
-    </head>
+<head>
+    <title>
+        Olá, Mundo!
+    </title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Title<td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Categories)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Title<td>
+                        <td>@item.Price.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+
 </html>

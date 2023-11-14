@@ -5,11 +5,16 @@ namespace MyRazorApp.Pages
 {
     public class IndexModel : PageModel
     {
-        public void OnGet()
+        public List<Category> Categories { get; set; } = new();
+        public async Task OnGet()
         {
-        }
-        public void OnPost() 
-        { 
+            await Task.Delay(5000);
+            for(int i = 0; i <= 100; i++)
+            {
+                Categories.Add(new Category(i, $"Item {i}", i * 18.95M));
+            }
         }
     }
 }
+
+public record Category(int Id, string Title, decimal Price);
