@@ -1,7 +1,6 @@
 ﻿@page
 @model MyRazorApp.Pages.loginModel
-@{
-}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 <!DOCTYPE html>
 <html>
@@ -10,29 +9,19 @@
         Login
     </title>
 </head>
-    <body>
-    <ul>
-        <li>
-            <a href="~/">Home</a>
-        </li>
-        <li>
-            <a href="~/about">About</a>
-        </li>
-        <li>
-            <a href="~/login">Login</a>
-        </li>
-    </ul>
+<body>
+    <partial name="Shared/NavMenuPartial" />
     <h1>
         Login
     </h1>
-        <div>
-            <label for="login">Login:</label>
-            <input type="email" name="login"/>
-        </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" name="password" />
-            <button>Login</button>
-        </div>
-    </body>
+    <div>
+        <label for="login">Login:</label>
+        <input type="email" name="login" />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" />
+        <button>Login</button>
+    </div>
+</body>
 </html>

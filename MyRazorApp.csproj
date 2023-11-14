@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Shared\NavMenuPartial.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\imgs\" />
   </ItemGroup>
