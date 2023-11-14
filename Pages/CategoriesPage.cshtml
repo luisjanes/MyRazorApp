@@ -1,0 +1,31 @@
+﻿@page
+@model CategoriesPageModel
+@{
+    Layout = "Shared/_Layout";
+    ViewData["Title"] = "Categories";
+}
+
+<h1>
+    Categorias
+</h1>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Title<td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Categories)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Title<td>
+                    <td>@item.Price.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
